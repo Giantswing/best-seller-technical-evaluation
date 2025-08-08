@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  @apply w-2 bg-gray-200 rounded-r-md;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-blue-500;
+}
+

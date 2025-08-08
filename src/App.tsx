@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import StoreCounter from "./pages/StoreCounter";
-import Test from "./pages/Test";
+import Home from "./pages/Home";
+import PostDetailView from "./pages/PostDetailView";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<StoreCounter />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/post/:id" element={<PostDetailView />} />
       </Routes>
     </BrowserRouter>
   );
