@@ -45,17 +45,17 @@ const Home = () => {
         <table className="min-w-full border border-gray-200 overflow-y-auto relative table-fixed">
           <thead>
             <tr className="bg-gray-100">
-              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-1/10">Title</th>
-              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-1/10">Author</th>
-              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-1/8">Category</th>
-              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-1/2">Body</th>
-              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-1/8">Actions</th>
+              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-[20%]">Title</th>
+              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-[20%]">Author</th>
+              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-[20%]">Category</th>
+              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-[40%]">Body</th>
+              <th className="px-4 py-2 text-left sticky top-12 z-10 bg-gray-100 w-[10%]">Actions</th>
             </tr>
           </thead>
           <tbody>
             {filteredPosts.map((post) => (
               <tr key={post.id} className="border-b border-gray-200 hover:bg-gray-100">
-                <td className="px-4 py-2 font-bold truncate">{post.title}</td>
+                <td className="px-4 py-2 font-bold">{post.title}</td>
                 <td className="px-4 py-2">{users.find((user) => user.id === post.userId)?.name || "Unknown"}</td>
                 <td className="px-4 py-2">
                   <button
